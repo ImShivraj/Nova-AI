@@ -141,8 +141,7 @@ if __name__=='__main__':
             pywhatkit.playonyt(query)            
             speak(f"Ok sir, this is what i found for {query} on youtube")
         
-        elif 'nova open stack overflow website' in query:
-            webbrowser.get('chrome').open_new_tab("stackoverflow.com")
+        
         
         elif 'nova open google' in query:
             webbrowser.get('chrome').open_new_tab("google.com")
@@ -258,7 +257,7 @@ if __name__=='__main__':
             for article in arts:
                 speak(article['title'])
                 print(article['title'])
-                speak("Moving on to the next news..Listen Carefully")
+                speak("Moving on to the next news..")
             
         elif 'joke' in query:
             jokeslol = pyjokes.get_joke()
