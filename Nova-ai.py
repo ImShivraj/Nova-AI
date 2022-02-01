@@ -80,6 +80,7 @@ def whatsappMessage():     #this  is not working ripnesssss
     speak("message sent sir.")
 
 great_work = ["great work nova", "well done nova", "nova good work"]
+
 if __name__=='__main__':
     
     while True:
@@ -92,7 +93,7 @@ if __name__=='__main__':
     
     while True:
             
-        query = takeCommand().lower()    #make it takecommand().lower()
+        query = takeCommand().lower()
 
     
         if 'nova wikipedia' in query:            
@@ -163,8 +164,7 @@ if __name__=='__main__':
             ss = pyautogui.screenshot(r'F:\pypy\Nova')
             speak("Done sir.")
             
-                   
-
+               
         elif 'nova open website' in query:
             query = query.replace("nova", "")
             query = query.replace("website", "")
