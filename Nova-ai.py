@@ -237,7 +237,7 @@ if __name__=='__main__':
             speak("Opening discord for you")
             os.startfile(discordPath)
 
-        elif random.choice(great_work) in query:
+        elif random.choice(["great work nova", "well done nova", "nova good work"]) in query:
             thank_list = ["thank you my leige", "thanks for the appreciation", "i am glad that you liked me"]
             speak(random.choice(thank_list))
 
