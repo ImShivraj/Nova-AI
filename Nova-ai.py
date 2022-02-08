@@ -14,6 +14,7 @@ import pywhatkit
 import pyautogui
 import keyboard
 import pyjokes
+from pynput.keyboard import Key, Controller
 
 chrome_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path))
@@ -77,14 +78,26 @@ def whatsappMessage():     #this  is not working ripnesssss
     speak("Sir, now in minutes")
     min  = int(takeCommand())
     pywhatkit.sendwhatmsg(ph, msg, hr, min)
+    keyboard.press_and_release('enter')
     speak("message sent sir.")
 
-great_work = ["great work nova", "well done nova", "nova good work"]
+def whutsapp():
+    def click_search_name(name):
+        
+        x3, y3 = [950,750] 
+        pyautogui.moveTo(x3, y3) 
+        pyautogui.click() 
+        pyautogui.sleep(2) 
+        pyautogui.typewrite(msg) 
+        pyautogui.press('enter')
+            
+
+
 
 if __name__=='__main__':
     
     while True:
-        initial = takeCommand().lower()
+        initial = input() #takeCommand().lower()
         if 'nova wake up' in  initial:
                 wishMe()
                 break
@@ -93,7 +106,7 @@ if __name__=='__main__':
     
     while True:
             
-        query = takeCommand().lower()
+        query = input() #takeCommand().lower()
 
     
         if 'nova wikipedia' in query:            
@@ -156,6 +169,11 @@ if __name__=='__main__':
         elif 'nova what is' in query:
             query = query.replace("nova what it", "")
             pywhatkit.info(query, lines=4)
+
+        elif 'nova use whatsapp' in query:
+            name = 'Maa'
+            msg = 'hello'
+            whutsapp()
 
         elif 'nova send a whatsapp message' in query:
             whatsappMessage()
