@@ -97,7 +97,7 @@ def whutsapp():
 if __name__=='__main__':
     
     while True:
-        initial = input() #takeCommand().lower()
+        initial = takeCommand().lower()
         if 'nova wake up' in  initial:
                 wishMe()
                 break
@@ -106,7 +106,7 @@ if __name__=='__main__':
     
     while True:
             
-        query = input() #takeCommand().lower()
+        query = takeCommand().lower()
 
     
         if 'nova wikipedia' in query:            
@@ -179,7 +179,7 @@ if __name__=='__main__':
             whatsappMessage()
 
         elif 'nova take a screenshot' in query:         #not working ripppppppp
-            ss = pyautogui.screenshot(r'F:\pypy\Nova')
+            ss = pyautogui.screenshot()
             speak("Done sir.")
             
                
