@@ -20,30 +20,6 @@ chrome_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path))
 
 
-engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
-engine.setProperty('rate', 170)
-# print(voices)
-
-
-
-def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
-
-def wishMe():
-    hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        speak("Good morning Sir!")
-
-    elif hour>=12 and hour<12:
-        speak("Good Afternoon Sir!")
-
-    else:
-        speak("Good evening Sir!")
-
-    speak("I am Nova. Please tell me how may I help you my leige.")
 
 
 def takeCommand():
