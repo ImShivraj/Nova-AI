@@ -1,5 +1,5 @@
 from urllib import response
-import pyttsx3 
+
 import datetime
 import speech_recognition as sr
 import wikipedia 
@@ -20,17 +20,7 @@ chrome_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path))
 
 
-engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
-engine.setProperty('rate', 170)
-# print(voices)
 
-
-
-def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)
