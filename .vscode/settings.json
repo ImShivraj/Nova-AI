@@ -1,5 +1,4 @@
 {
     "python.analysis.extraPaths": [
-        "./Speak Function"
+        "./Speak Function", "./Command Function"
     ]
-}

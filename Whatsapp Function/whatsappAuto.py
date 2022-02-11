@@ -1,4 +1,4 @@
-
+from command import *
 from speak import *
 
 def whatsappMessage():     #this  is not working ripnesssss
