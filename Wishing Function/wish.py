@@ -1,4 +1,5 @@
 from speak import *
+import datetime
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)

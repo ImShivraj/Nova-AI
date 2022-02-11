@@ -1,7 +1,7 @@
 from urllib import response
-import pyttsx3 
+
 import datetime
-import speech_recognition as sr
+
 import wikipedia 
 import webbrowser
 import os
@@ -16,46 +16,11 @@ import keyboard
 import pyjokes
 from pynput.keyboard import Key, Controller
 
+
 chrome_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path))
 
 
-
-
-def takeCommand():
-
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("\nListening...")
-        r.pause_threshold = 1
-        audio = r.listen(source)
-
-    try:
-        print("Recognising...")
-        query = r.recognize_google(audio, language='en-in')
-        print(f"User said: {query}\n")
-
-    except Exception as e:
-        print("Say that again please...")
-        # speak("Say that again please")
-        return "None"
-
-    return query
-
-def whatsappMessage():     #this  is not working ripnesssss
-    #doesn't work
-    speak("Sir, Please type me the phone number of the person")
-    phone = input()
-    ph = '+91' + phone
-    speak("Sir, please tell me the message you want to send")    
-    msg = takeCommand().lower()
-    speak("Sir, tell me the time, first, tell me the hour")
-    hr = int(takeCommand())
-    speak("Sir, now in minutes")
-    min  = int(takeCommand())
-    pywhatkit.sendwhatmsg(ph, msg, hr, min)
-    keyboard.press_and_release('enter')
-    speak("message sent sir.")
 
 def whutsapp():
     def click_search_name(name):

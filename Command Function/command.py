@@ -17,5 +17,4 @@ def takeCommand():
         print("Say that again please...")
         # speak("Say that again please")
         return "None"
-
     return query
