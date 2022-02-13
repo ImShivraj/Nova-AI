@@ -1,5 +1,7 @@
 from command import *
 from speak import *
+import pywhatkit
+
 
 def whatsappMessage():     #this  is not working ripnesssss
     #doesn't work
@@ -13,5 +15,5 @@ def whatsappMessage():     #this  is not working ripnesssss
     speak("Sir, now in minutes")
     min  = int(takeCommand())
     pywhatkit.sendwhatmsg(ph, msg, hr, min)
-    keyboard.press_and_release('enter')
+    
     speak("message sent sir.")

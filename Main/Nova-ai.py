@@ -1,7 +1,8 @@
+from whatsappAuto import *
 from urllib import response
-
+from command import *
 import datetime
-
+from speak import *
 import wikipedia 
 import webbrowser
 import os
@@ -12,9 +13,10 @@ import json
 import time
 import pywhatkit
 import pyautogui
-import keyboard
+
 import pyjokes
 from pynput.keyboard import Key, Controller
+from wish import *
 
 
 chrome_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
