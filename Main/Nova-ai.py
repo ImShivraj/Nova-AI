@@ -1,7 +1,12 @@
+from whatsappAuto import *
 from urllib import response
+<<<<<<< HEAD:Nova-ai.py
 
+=======
+from command import *
+>>>>>>> new1:Main/Nova-ai.py
 import datetime
-import speech_recognition as sr
+from speak import *
 import wikipedia 
 import webbrowser
 import os
@@ -12,14 +17,17 @@ import json
 import time
 import pywhatkit
 import pyautogui
-import keyboard
+
 import pyjokes
 from pynput.keyboard import Key, Controller
+from wish import *
+
 
 chrome_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 webbrowser.register('chrome', None,webbrowser.BackgroundBrowser(chrome_path))
 
 
+<<<<<<< HEAD:Nova-ai.py
 
 
 def wishMe():
@@ -70,6 +78,8 @@ def whatsappMessage():     #this  is not working ripnesssss
     pywhatkit.sendwhatmsg(ph, msg, hr, min)
     keyboard.press_and_release('enter')
     speak("message sent sir.")
+=======
+>>>>>>> new1:Main/Nova-ai.py
 
 def whutsapp():
     def click_search_name(name):
